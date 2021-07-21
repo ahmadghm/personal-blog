@@ -1,0 +1,134 @@
+@import url("media.css");
+@import url("button.css");
+@import url("anchor.css");
+@import url("blog.css");
+
+/*main style*/
+body {
+    background-color: #f4f9f9;
+    font-size: 16px;
+    font-family: Cairo;
+    color: #02475e;
+}
+
+/*navbar style*/
+#navbar {
+    font-size: 1em;
+    text-align: center;
+    margin: 2% 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*main grid for index page*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+        "nav nav nav"
+        "card art gal"
+        "ft ft ft";
+}
+
+#navbar {
+    grid-area: nav;
+    border-bottom: 2px solid #687980;
+}
+
+.arti {
+    grid-area: art;
+}
+
+article {
+    text-align: justify;
+}
+
+.card {
+    grid-area: card;
+}
+
+.content-card {
+    text-align: center;
+    padding: 5% 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery {
+    grid-area: gal;
+}
+
+/* gallery grid*/
+#gallery-img {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px 5px;
+    grid-template-areas:
+        "img1 img2"
+        "img3 img4";
+}
+
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+.foot {
+    grid-area: ft;
+}
+
+footer {
+    text-align: center;
+}
+
+/*media query less 900px tablet and phone screen*/
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.2fr;
+        grid-gap: 5px;
+        grid-template-areas:
+            "nav"
+            "card"
+            "art"
+            "gal"
+            "ft";
+    }
+
+    #navbar {
+        margin: 0 5%;
+        grid-area: nav;
+        border-bottom: 2px solid red;
+    }
+
+    .arti {
+        grid-area: art;
+    }
+
+    .card {
+        grid-area: card;
+    }
+
+    .gallery {
+        grid-area: gal;
+    }
+
+    .foot {
+        grid-area: ft;
+    }
+}

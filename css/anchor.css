@@ -1,0 +1,12 @@
+/*anchor style*/
+#navbar a {
+    padding: 0 5px;
+    color: #aaaaaa;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: #a4ebf3;
+    text-decoration: overline;
+}
